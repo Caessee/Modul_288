@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login/Registration Form Transition</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel='stylesheet' href='style.css'>
+  <script src="registerform.class.js"></script>
+  <script src="loginform.class.js"></script>
+  <script src="errorlist.class.js"></script>
+  <script src="captchahandler.class.js"></script>
+</head>
+
+<body>
+  <div class="cont" style="margin-top: 4%;">
+    <div class="form sign-in" style="overflow: auto;">
+      <h2>Willkommen Zurück,</h2>
+      <label>
+        <span>Email</span>
+        <input type="text" id="login-email-inp" />
+      </label>
+      <label>
+        <span>Passwort</span>
+        <input type="password" id="login-pw-inp" />
+      </label>
+      <div class="captcha">
+        <div class="inline" id="login-captcha-reload-btn">
+          <i class="fas fa-sync"></i>
+        </div>
+        <div class="captcha-image" id="login-chaptcha-image"></div>
+      </div>
+      <label>
+        <span>Captcha</span>
+        <input type="text" id="login-captcha-inp" />
+      </label>
+      <p class="forgot-pass">Passwort vergessen?</p>
+      <div class="errorlist-container">
+        <ul class="errorlist" id="login-errorlist"></ul>
+      </div>
+      <button type="button" class="submit" disabled id="login-submit-btn">Sign In</button>
+    </div>
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img__text m--up">
+          <h2>Neu Hier ?</h2>
+          <p>Anmelden und grosses Erfahren!</p>
+        </div>
+        <div class="img__text m--in">
+          <h2>Eine*r von uns?</h2>
+          <p>Hast du schon einen Account, melde dich an, wir haben dich vermisst!</p>
+        </div>
+        <div class="img__btn">
+          <span class="m--up">Starten</span>
+          <span class="m--in">Los gehts</span>
+        </div>
+      </div>
+      <div class="form sign-up" style="overflow: auto;">
+        <h2>Zeit sich wie Zuhause zu fühlen,</h2>
+        <label>
+          <span>Name</span>
+          <input type="text" id="register-name-inp" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="text" id="register-email-inp" />
+        </label>
+        <label>
+          <span>Passwort</span>
+          <input type="password" id="register-pw-inp" strength="false" />
+          <span id="pw-strength" class="pw-strength">Weak</span>
+        </label>
+        <div class="captcha">
+          <div class="inline" id="register-captcha-reload-btn">
+            <i class="fas fa-sync"></i>
+          </div>
+          <div class="captcha-image" id="register-chaptcha-image"></div>
+        </div>
+        <label>
+          <span>Captcha</span>
+          <input type="text" id="register-captcha-inp" />
+        </label>
+        <div class="errorlist-container">
+          <ul class="errorlist" id="register-errorlist"></ul>
+        </div>
+        <button type="button" class="submit" disabled id="register-submit-btn">Starten</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
